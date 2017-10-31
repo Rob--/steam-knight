@@ -6,6 +6,9 @@
                     <li v-bind:class="{ 'is-active': isActive('offers') }"><router-link :to="{ name: 'offers' }">Trade Offers</router-link></li>
                     <li v-bind:class="{ 'is-active': isActive('history') }"><router-link :to="{ name: 'history' }">Trade History</router-link></li>
                     <li v-bind:class="{ 'is-active': isActive('profile') }"><router-link :to="{ name: 'profile' }">Profile</router-link></li>
+
+                    <!-- The underlying implementation currently exists but is inactive, Steam limitations prevent the client from receiving a list of confirmations. -->
+                    <!--<li v-bind:class="{ 'is-active': isActive('confirmations') }"><router-link :to="{ name: 'confirmations' }">Confirmations</router-link></li>-->
                 </ul>
             </div>
             <div class="router-view">

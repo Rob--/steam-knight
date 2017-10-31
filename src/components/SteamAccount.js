@@ -110,6 +110,35 @@ class SteamAccount {
     this.tradeOfferManager = tradeOfferManager;
   }
 
+  getConfirmationKey() {
+    if (!this.identitySecret) {
+      return false;
+    }
+
+    const time = new Date().getTime();
+    const key = SteamTotp.getConfirmationKey(this.identitySecret, time, 'conf');
+
+    return {
+      time, key,
+    };
+  }
+
+  getConfirmations() {
+    return new Promise((resolve, reject) => {
+      const callback = async (error, confirmations) => {
+        if (error) {
+          this.log('an error occurred fetching confirmations');
+          reject(error);
+        }
+
+        console.log(confirmations);
+      };
+
+      const { time, key } = this.getConfirmationKey();
+      this.community.getConfirmations(time, key, callback);
+    });
+  }
+
   getOffers() {
     return new Promise((resolve, reject) => {
       const callback = async (error, sent, received) => {

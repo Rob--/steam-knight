@@ -38,6 +38,11 @@ export default new Router({
           name: 'profile',
           component: require('@/components/AccountPage/Profile'),
         },
+        {
+          path: 'confirmations',
+          name: 'confirmations',
+          component: require('@/components/AccountPage/Confirmations'),
+        },
       ],
     },
     {

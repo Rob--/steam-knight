@@ -63,6 +63,14 @@ const actions = {
 
     return Promise.resolve();
   },
+  async getConfirmations(context, username) {
+    if (!Object.hasOwnProperty.call(context.state.accounts, username)) {
+      return Promise.resolve();
+    }
+
+    await SteamAccountManager.get(username).getConfirmations();
+    return [];
+  },
 };
 
 const getters = {
