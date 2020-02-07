@@ -9,6 +9,8 @@
 
 ---
 
+Note: this project is not maintained, it was initially just to demo the creation of a Steam client in Node with Electron and Vue.
+
 ## Features
 
 ### Encryption
