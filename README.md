@@ -40,11 +40,19 @@ and allowing you to publish changes directly from the client.
 ### Screenshots
 
 #### Profile
-<img width="438" src="media/profile.png" alt="profile">
+<!-- <img width="438" src="media/profile.png" alt="profile"> -->
+![Profile](media/profile.png)
 
 
 #### Trades
-<img width="438" src="media/trades.png" alt="trades">
+<!-- <img width="438" src="media/trades.png" alt="trades"> -->
+![Trades](media/trades.png)
+
+#### Bio
+![Bio](media/bio.gif)
+
+#### Demo
+![Demo](media/demo.gif)
 
 ### TODO
 
